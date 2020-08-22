@@ -1,13 +1,25 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+@font-face {
+  font-family: Arvo;
+  src: url(/src/assets/arvo-regular.ttf);
+}
+html {
+    scroll-behavior: smooth;
+  }
+  @media only screen and (max-width: 600px) {
+    .project-grid{
+      display:flex;
+    flex-direction: column;
+    }
+  }
+
+  @media only screen and (min-width: 601px){
+    .project-grid{
+      display: flex;
+      flex-direction: row;
+        justify-content: space-around;
+  
+  }}
+*{
+  font-family: Arvo;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
-}
