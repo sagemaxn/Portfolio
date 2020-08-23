@@ -7,16 +7,22 @@ import NavLink from 'react-bootstrap/NavLink';
 
 const Styled = styled.div`
 .nav{
-    background-color: #4bb9a1;
+    background-color: #2E2E2E;
     height: 56px;
     }
-.navbar-nav{
-   margin-left:70%;
-}
+
+
 .nav-link{
-    text-align: end;
+    text-align: center;
 }
 .color{
+    color: #4bb9a1;
+}
+
+.test{
+    background: #2E2E2E;
+    border-radius: 8px;
+    max-width: 250px;
     
 }
 `
@@ -24,21 +30,21 @@ const Styled = styled.div`
 function NavigationBar(){
     return (
         <Styled>
-        <Navbar className="nav" expand="lg" fixed="top">
+        <Navbar className="nav" expand="sm" fixed="top">
             <Navbar.Brand className="color">Sage Maxwell</Navbar.Brand>
             <Navbar.Toggle aria-controls="basic-navbar-nav" />
             <Navbar.Collapse id="basic-navbar-nav navlinks">
-                <Nav>
-                    <NavLink className="color" href="#home">home</NavLink>
+                <Nav className="test ml-auto">
+                    <NavLink href="#home"><span className="color">Home</span></NavLink>
                 
                
-                    <NavLink className="color" href="#about">about</NavLink>
+                    <NavLink className="color" href="#about"><span className="color">About</span></NavLink>
                 
                 
-                    <NavLink className="color" href="#projects">projects</NavLink>
+                    <NavLink className="color" href="#projects"><span className="color">Projects</span></NavLink>
 
 
-                    <NavLink className="color" href="#contact">contact</NavLink>
+                    <NavLink className="color" href="#contact"><span className="color">Contact</span></NavLink>
                 </Nav>
             </Navbar.Collapse>
         </Navbar>

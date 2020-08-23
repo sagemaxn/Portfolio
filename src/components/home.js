@@ -27,6 +27,7 @@ text-align: center;
         width:10%;
         min-width:25px;
         margin:4px;
+        height: auto;
     }
 }
 .left{
@@ -48,7 +49,7 @@ text-align: center;
     width: 100%;
     height: 100%;
     display: flex;
-    border-bottom: solid 5px;
+    border-bottom: solid 5px #2E2E2E;
 }
     z-index: 2
 }

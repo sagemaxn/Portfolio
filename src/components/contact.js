@@ -7,17 +7,36 @@ import styled from 'styled-components';
 
 const Styles = styled.div`
 text-align: center;
-
+color: #4bb9a1;
+.title{
+    font-size: 30px;
+}
 #contact{
     height: 100%;
-    background-color: white;
+    background-color: #2E2E2E;
+    margin: auto;
     margin-bottom: 50px;
+    max-width: 500px;
 }
+input, textarea{
+    background: #2E2E2E;
+    color: white;
+    :-internal-autofill{
+        background-color: #2E2E2E
+    }
+}
+
 #submit{
-    background-color: black
+    background-color: #4bb9a1;
+    color: #2E2E2E;
 }
 .container{
-    background-color: #4bb9a1;
+    background-color: #2E2E2E;
+}
+.form-control:focus{
+    background-color: #2E2E2E;
+    border-color: #4bb9a1;
+    color: white;
 }
 `
 
@@ -73,27 +92,24 @@ function Contact(){
 
 return (
     <Styles>
-    <div id="contact">
-    
-    <div className="container mt-3 card card-body p-4">
-        <h4 className="text-center">Email Me</h4>
-        <div className="form-group">
-            <label htmlFor="Name">Full Name</label>
-            <input type="text" name="fullName" id="userFullName" value={userInput.fullName}className="form-control" onChange={handleChange} required></input>
-        </div>
-        <div className="form-group">
-            <label htmlFor="Email">Your Email Adress</label>
+  
+        <div className="title text-center">Email Me</div>
+        <form id="contact">
+            <input type="text" name="fullName" id="userFullName" placeholder="Full Name" value={userInput.fullName}className="form-control" onChange={handleChange} required></input>
+        
+      
+           
             <input type="Email" name="email" id="userEmail" className="form-control" value={userInput.email} onChange={handleChange} required></input>
-        </div>
-        <div className="form-group">
-            <label htmlFor="Message">Message</label>
+       
+       
+         
             <textarea name="message" id="userMessage" className="form-control" value={userInput.message} onChange={handleChange} required></textarea>
-        </div>
+       
         <button id="submit" className="btn btn-primary" onClick={submitHandler}>Submit</button>
-        or use sagemaxn@gmail.com
-    </div>
     
-    </div>
+    </form>
+   
+    
     <Footer/>
     </Styles>
 )

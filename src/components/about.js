@@ -14,6 +14,7 @@ z-index: 10;
 p{
     font-size: 30px;
     margin-top: 250px;
+    color: #2E2E2E;
 
 }
 #about{

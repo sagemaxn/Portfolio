@@ -10,16 +10,28 @@ html {
       display:flex;
     flex-direction: column;
     }
+    .img
+    {width:250px;
+    height: 250px;
+  }
   }
 
   @media only screen and (min-width: 601px){
     .project-grid{
       display: flex;
       flex-direction: row;
-        justify-content: space-around;
+        justify-content: space-evenly;
+        flex-wrap: wrap;
   
-  }}
+  }
+  .img{
+    width: 350px;
+    height: 350px;
+  }
+  
+}
 *{
   font-family: Arvo;
 }
+
 

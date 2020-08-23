@@ -9,11 +9,8 @@ import messageImg from '../assets/message-sample.png';
 
 const Styles = styled.div`
 background: linear-gradient(#4bb9a1, white);
+color: #2E2E2E;
 }    
-.projects{
-  height: 100%;
-    display:flex;
-}
 .filler{
   height:100px;
 }
@@ -27,8 +24,8 @@ background: linear-gradient(#4bb9a1, white);
     justify-content: center;
 }
 .img{
-    width:200px;
-    height: 200px;
+    width:250px;
+    height: 250px;
     border: solid #4bb9a1 ;
     border-radius: 50%;
     position: relative;
