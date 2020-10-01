@@ -1,7 +1,5 @@
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-I am Sage Maxwell and this is my porfolio! It is close to done.
-
 This project was made with:
 
 React - https://github.com/facebook/react

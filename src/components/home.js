@@ -1,8 +1,28 @@
-import React from 'react';
+import React, { useState, useEffect } from "react";
 
-import styled from 'styled-components';
+import styled from "styled-components";
 
-const Styles = styled.div`
+import linkedinLogo from "../assets/linkedin.png";
+import githubLogo from "../assets/githubicon.png";
+
+function Home() {
+  const [height, setHeight] = useState(window.innerHeight);
+
+  function updateDimensions() {
+    let update_height = window.innerHeight;
+    setHeight(update_height);
+  }
+
+  useEffect(() => {
+    //updateDimensions();
+    window.addEventListener("resize", updateDimensions);
+
+    return function cleanup() {
+      window.removeEventListener("resize", updateDimensions);
+    };
+  }, []);
+
+  const Styles = styled.div`
 height: 100vh;
 text-align: center;
 
@@ -25,7 +45,7 @@ text-align: center;
 
     .img{
         width:10%;
-        min-width:25px;
+        min-width:40px;
         margin:4px;
         height: auto;
     }
@@ -33,11 +53,10 @@ text-align: center;
 .left{
     grid-rows: 1 / 2;
     grid-columns: 1 / 2;
-    background: url('https://www.lovethispic.com/uploaded_images/34332-Steady-Rain.gif?1') no-repeat;
+    background: url('https://live.staticflickr.com/713/31948491460_fdf3ef6a9f_b.jpg') no-repeat;
     background-size: cover;
     background-position: center;
-    height: ${window.innerHeight}px;
-
+    height: ${height}px;
 ;
 }
 
@@ -47,39 +66,43 @@ text-align: center;
     top: 0;
     left: 0;
     width: 100%;
-    height: 100%;
+    height: ${height}px;
     display: flex;
     border-bottom: solid 5px #2E2E2E;
 }
     z-index: 2
 }
-`
-
-function Home(){
-return (
+`;
+  return (
     <Styles>
-    <div id="home">
-
+      <div id="home">
         <div className="right">
-            <div className="home-content">
-                <h2>Sage Maxwell</h2>
-                <h1>Web Developer</h1>
+          <div className="home-content">
+            <h2>Sage Maxwell</h2>
+            <h1>Web Developer</h1>
 
-                <div className="links">
+            <div className="links">
+              <a href="https://github.com/sagemaxn" target="blank">
+                <img className="img" src={githubLogo} alt="github logo"></img>
+              </a>
 
-                    <a href="https//github.com/sagemaxn" target="blank"><img className="img" src="https://image.flaticon.com/icons/svg/25/25231.svg"></img></a>
-
-                    <a href="https://www.linkedin.com/in/sage-maxwell-239387147/" target="blank"><img className="img" src="https://image.flaticon.com/icons/png/512/61/61109.png"></img></a>
-
-                </div>    
-
+              <a
+                href="https://www.linkedin.com/in/sage-maxwell-239387147/"
+                target="blank"
+              >
+                <img
+                  className="img"
+                  src={linkedinLogo}
+                  alt="linkedin logo"
+                ></img>
+              </a>
             </div>
+          </div>
         </div>
         <div className="left"></div>
-
-    </div>
+      </div>
     </Styles>
-)
+  );
 }
 
-export default Home
+export default Home;

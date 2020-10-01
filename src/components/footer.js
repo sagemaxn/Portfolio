@@ -1,31 +1,38 @@
-import React from 'react';
-import styled from 'styled-components';
-import Navbar from 'react-bootstrap/Navbar';
-import Nav from 'react-bootstrap/Nav';
+import React from "react";
+import styled from "styled-components";
+import Navbar from "react-bootstrap/Navbar";
+import Nav from "react-bootstrap/Nav";
 
 const Styles = styled.div`
+a:visited {color: #4bb9a1;}
+a{color #4bb9a1}
 .footer{
     height:10%;
+    background: #2E2E2E;
 }
 img{
     height: 30px;
 }
 .nav{
-   justify-content: center;
+   justify-content: space-evenly;
    width: 100%;
+   
 }
-`
+`;
 
-function Footer(){
-    return (
+function Footer() {
+  return (
     <Styles>
-    <Navbar sticky="bottom" className="footer">
+      <Navbar sticky="bottom" className="footer">
         <Nav className="nav">
-        <span>sagemaxn@gmail.com</span> <img src="https://image.flaticon.com/icons/png/512/61/61109.png"></img>
+          <span>sagemaxn@gmail.com</span>{" "}
+          <a href="https://github.com/sagemaxn/Portfolio" target="blank">
+            source code
+          </a>
         </Nav>
-    </Navbar>
+      </Navbar>
     </Styles>
-    )
+  );
 }
 
-export default Footer
+export default Footer;

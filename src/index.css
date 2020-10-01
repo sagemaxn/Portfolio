@@ -3,35 +3,49 @@
   src: url(/src/assets/arvo-regular.ttf);
 }
 html {
-    scroll-behavior: smooth;
-  }
-  @media only screen and (max-width: 600px) {
-    .project-grid{
-      display:flex;
+  scroll-behavior: smooth;
+}
+@media only screen and (max-width: 600px) {
+  .project-grid {
+    display: flex;
     flex-direction: column;
-    }
-    .img
-    {width:250px;
+  }
+  .img {
+    width: 250px;
     height: 250px;
   }
+  .descrip {
+    display: flex;
+    flex-direction: column;
   }
+  .skills,
+  .paragraph {
+    margin: auto;
+  }
+}
 
-  @media only screen and (min-width: 601px){
-    .project-grid{
-      display: flex;
-      flex-direction: row;
-        justify-content: space-evenly;
-        flex-wrap: wrap;
-  
+@media only screen and (min-width: 601px) {
+  .project-grid {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
   }
-  .img{
+  .img {
     width: 350px;
     height: 350px;
   }
-  
+  .descrip {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+  }
+  .skills,
+  .paragraph {
+    max-width: 40%;
+    align-self: center;
+  }
 }
-*{
+* {
   font-family: Arvo;
 }
-
-
