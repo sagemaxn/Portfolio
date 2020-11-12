@@ -28,12 +28,14 @@ color: #2E2E2E;
 }
 .img{
 
-    border: solid #4bb9a1 ;
-    border-radius: 50%;
+    border: solid #2E2E2E ;
+    border-radius: 10px;
     position: relative;
 
     :hover{
-      cursor: pointer
+      cursor: pointer;
+      border-color: #4bb9a1;
+      
     }
 .poppup{
   width: 300px;
@@ -98,7 +100,7 @@ function Details(props) {
           Live Version
         </Button>
 
-        {/* <Button onClick={props.onHide} style={{backgroundColor: "black", padding: "2px"}}>Close</Button> */}
+       
       </Modal.Footer>
     </Modal>
   );

@@ -21,14 +21,22 @@ const Styles = styled.div`
     margin: auto;
     margin-bottom: 50px;
     max-width: 500px;
+    border-radius: 10px;
   }
   input,
   textarea {
     background: #2e2e2e;
+    
+    border-radius: 0px;
     color: white;
     :-internal-autofill {
       background-color: #2e2e2e;
     }
+  }
+  #userFullName{
+    border-radius: 10px 10px 0 0;
+    border: 1px;
+    border-color: #2e2e2e;
   }
   #userMessage {
     height: 100px;

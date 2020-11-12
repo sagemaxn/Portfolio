@@ -1,5 +1,5 @@
 import React from "react";
-import { Layout } from "./Layout";
+import Layout2 from "./Layout2";
 
 import styled from "styled-components";
 
@@ -23,18 +23,40 @@ const Styles = styled.div`
     text-align: center;
     font-size: 60px;
     font-weight: bold;
+    text-decoration: underline;
+    width: 100%;
+  
   }
   p,
   ul {
-    font-size: 30px;
-    text-align: left;
+    font-size: 20px;
+    display: flex;
+    text-align: center;
+    flex-direction: column;
   }
   #about {
     height: 100%;
     display: flex;
+    flex-direction: column;
   }
   li img {
     width: 50px;
+  }
+  .paragraph {
+    background-color: white;
+    border-radius: 10px;
+    padding: 5%;
+    border: solid
+  }
+  .skills{
+    display: grid;
+    grid: 1fr 1fr/ 1fr 1fr 1fr;
+    list-style-type: none;
+    padding: 5%;
+  }
+  .skillsTitle{
+    grid-rows: 1 / 2;
+    grid-columns: 1 / 3;
   }
 `;
 
@@ -42,8 +64,9 @@ function About() {
   return (
     <Styles>
       <div id="about">
-        <Layout>
+        
           <h1>About Me</h1>
+         
           <div className="descrip">
             <p className="paragraph">
               Hello! I'm Sage and I am passionate about solving problems. A
@@ -51,32 +74,32 @@ function About() {
               me to where I am now. I do not give up.
             </p>
             <ul className="skills">
-              My skills:
+              
               <li>
-                <img src={htmlLogo} alt="HTML logo"></img>HTML
+                <img src={htmlLogo} alt="HTML logo"></img><div>HTML</div>
               </li>
               <li>
-                <img src={cssLogo} alt="CSS logo"></img>CSS
+                <img src={cssLogo} alt="CSS logo"></img><div>CSS</div>
               </li>
               <li>
-                <img src={jsLogo} alt="JavaScript logo"></img>Javascript
-              </li>
+                <img src={jsLogo} alt="JavaScript logo"></img><div>Javascript
+                </div></li>
               <li>
-                <img src={reactLogo} alt="React logo"></img>React
+                <img src={reactLogo} alt="React logo"></img><div>React</div>
               </li>
               <li>
                 <img
                   src="https://logodownload.org/wp-content/uploads/2019/10/photoshop-logo-3.png"
                   alt="Photoshop logo"
-                ></img>
-                Photoshop
+                ></img><div>
+                Photoshop</div>
               </li>
               <li>
-                <img src={brain} alt="an icon of a brain"></img>And More!
+                <img src={brain} alt="an icon of a brain"></img><div>And More!</div>
               </li>
             </ul>
           </div>
-        </Layout>
+         
       </div>
     </Styles>
   );

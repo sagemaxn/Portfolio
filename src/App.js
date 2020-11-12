@@ -6,6 +6,10 @@ import About from "./components/about";
 import Projects from "./components/projects";
 import Contact from "./components/contact";
 
+import Layout from "./components/Layout"
+//import Layout2 from "./components/Layout2"
+
+
 function App() {
   return (
     <div>
@@ -13,9 +17,15 @@ function App() {
         <NavigationBar />
 
         <Home />
+        
+        <Layout>
         <About />
+        </Layout>
+        <Layout>
         <Projects />
+        </Layout>
         <Contact />
+        
       </div>
     </div>
   );
