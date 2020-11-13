@@ -23,7 +23,6 @@ const Styles = styled.div`
     text-align: center;
     font-size: 60px;
     font-weight: bold;
-    text-decoration: underline;
     width: 100%;
   
   }
@@ -41,6 +40,13 @@ const Styles = styled.div`
   }
   li img {
     width: 50px;
+    justify-self: center;
+    align-self: center;
+  }
+  li{
+    display: grid;
+    grid: 1fr 1fr / 1fr;
+    padding: 2%;
   }
   .paragraph {
     background-color: white;
@@ -50,14 +56,13 @@ const Styles = styled.div`
   }
   .skills{
     display: grid;
-    grid: 1fr 1fr/ 1fr 1fr 1fr;
+    grid:  1fr 1fr /  1fr 1fr 1fr;
     list-style-type: none;
-    padding: 5%;
+    padding: 0;
+    margin-top: 5%;
   }
-  .skillsTitle{
-    grid-rows: 1 / 2;
-    grid-columns: 1 / 3;
-  }
+
+
 `;
 
 function About() {
@@ -71,12 +76,12 @@ function About() {
             <p className="paragraph">
               Hello! I'm Sage and I am passionate about solving problems. A
               dedication to growth and learning more every single day has gotten
-              me to where I am now. I do not give up.
+              me to where I am now. I do not give up, and delivering satisfaction isn't just important to me. I obsess over it.
             </p>
             <ul className="skills">
               
               <li>
-                <img src={htmlLogo} alt="HTML logo"></img><div>HTML</div>
+                <img src={htmlLogo} alt="HTML logo"></img><div className="test">HTML</div>
               </li>
               <li>
                 <img src={cssLogo} alt="CSS logo"></img><div>CSS</div>
@@ -84,6 +89,8 @@ function About() {
               <li>
                 <img src={jsLogo} alt="JavaScript logo"></img><div>Javascript
                 </div></li>
+               
+                
               <li>
                 <img src={reactLogo} alt="React logo"></img><div>React</div>
               </li>
@@ -95,7 +102,7 @@ function About() {
                 Photoshop</div>
               </li>
               <li>
-                <img src={brain} alt="an icon of a brain"></img><div>And More!</div>
+                <img src={brain} alt="an icon of a brain"></img><div>More!</div>
               </li>
             </ul>
           </div>
